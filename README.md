@@ -7,7 +7,8 @@ Estamos aprendiendo las bases iniciales para crear un proyecto en Github
 GIT es un sistema ya instalado en tu computadora, que nos permite tener distintas versiones de un proyecto en el que estemos trabajando, pudiendo tener el archivo del proyecto y luego otras versiones que son archivos para probar cosas, y qué los iremos testeando para ver si lo añadimos al archivo principal. Esto sirve mucho cuándo hay más de una persona trabajando en el proyectos, aumentando la productividad y la eficiencia. Por último, GIT se ejecuta en la terminal de tu computadora, y se utiliza a través de comandos, como merge, pull, add, commit.
 Por otra parte, GitHub es una plataforma a la cual puedes subir a través de la nube (Internet) con el cual podemos subir nuestros proyectos y sus versiones que tenemos con Git.
 
-**¿Por qué usar un sistema de control de versiones como Git?**
+### **¿Por qué usar un sistema de control de versiones como Git?**
+
 Un sistema de control de versiones como Git nos ayuda a guardar el historial de cambios y crecimiento de los archivos de nuestro proyecto.
 
 En realidad, los cambios y diferencias entre las versiones de nuestros proyectos pueden tener similitudes, algunas veces los cambios pueden ser solo una palabra o una parte específica de un archivo específico. Git está optimizado para guardar todos estos cambios de forma atómica e incremental, o sea, aplicando cambios sobre los últimos cambios, estos sobre los cambios anteriores y así hasta el inicio de nuestro proyecto.
