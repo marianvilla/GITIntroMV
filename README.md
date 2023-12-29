@@ -10,48 +10,60 @@ Por otra parte, GitHub es una plataforma a la cual puedes subir a través de la 
 ### **¿Por qué usar un sistema de control de versiones como Git?**
 
 Un sistema de control de versiones como Git nos ayuda a guardar el historial de cambios y crecimiento de los archivos de nuestro proyecto.
-
 En realidad, los cambios y diferencias entre las versiones de nuestros proyectos pueden tener similitudes, algunas veces los cambios pueden ser solo una palabra o una parte específica de un archivo específico. Git está optimizado para guardar todos estos cambios de forma atómica e incremental, o sea, aplicando cambios sobre los últimos cambios, estos sobre los cambios anteriores y así hasta el inicio de nuestro proyecto.
 
+git init
+------------
 El comando para iniciar nuestro repositorio, o sea, indicarle a Git que queremos usar su sistema de control de versiones en nuestro proyecto, es git init.
 
+git add
+------------
 El comando para que nuestro repositorio sepa de la existencia de un archivo o sus últimos cambios es git add. Este comando no almacena las actualizaciones de forma definitiva, solo las guarda en algo que conocemos como “Staging Area” (no te preocupes, lo entenderemos más adelante).
 
+git commit
+------------
 El comando para almacenar definitivamente todos los cambios que por ahora viven en el staging área es git commit. También podemos guardar un mensaje para recordar muy bien qué cambios hicimos en este commit con el argumento -m "Mensaje del commit".
 
+git push
+------------
 Por último, si queremos mandar nuestros commits a un servidor remoto, un lugar donde todos podamos conectar nuestros proyectos, usamos el comando git push.
 
 
-Objetivos del curso:
--Instalar Git
--Crear un repositorio local (Experimentar) (Master local)
--Crear repositorio remoto (Compartir en la red)(Master remoto)
+### Objetivos del curso:
+------------
+- Instalar Git
+- Crear un repositorio local (Experimentar) (Master local)
+- Crear repositorio remoto (Compartir en la red)(Master remoto)
 
-git init- inicializa el repositorio de git. Empieza en tu carpeta un repositorio para guardar los cambios.
-git add . – Agrega todos los cambios en todos los archivos al área de staging
-git status – Para ver el estado de la BD si se han hecho cambios, pero no se han agregado, ahí saldrá. Muestra el estado de tu repositorio
-git show - Muestra todos los cambios históricos hechos y sus detalles (qué cambió, cuándo y quién los hizo). Muestra el histórico de los cambios hechos.
-git commit: Envía los últimos cambios del archivo a la base de datos del sistema de control de versiones. Una buena práctica al usar este comando es añadir -m; al hacer esto, podemos escribir un mensaje que nos permita recordar los cambios que hicimos en ese momento.
-git push -envía los cambios al repositorio remoto
-git push origin <nombre_rama>: Sube la rama “nombre_rama” al servidor remoto.
-git pull -Agrega los cambios del commit más nuevo al repositorio local
-git log “nombre del archivo” : Muestra el historial de ese archivo. git log <nombre_archivo>: Muestra todo el historial del archivo.
-git fetch: Descarga los cambios realizados en el repositorio remoto.
-git merge <nombre_rama>: Impacta en la rama en la que te encuentras parado, los cambios realizados en la rama “nombre_rama”.
-git checkout -b <nombre_rama_nueva>: Crea una rama a partir de la que te encuentres parado con el nombre “nombre_rama_nueva”, y luego salta sobre la rama nueva, por lo que quedas parado en esta última.
-git checkout -t origin/<nombre_rama>: Si existe una rama remota de nombre “nombre_rama”, al ejecutar este comando se crea una rama local con el nombre “nombre_rama” para hacer un seguimiento de la rama remota con el mismo nombre.
-git branch: Lista todas las ramas locales.
-git branch -a:Lista todas las ramas locales y remotas.
-git branch -d <nombre_rama>: Elimina la rama local con el nombre “nombre_rama”.
-git push origin <nombre_rama>: Commitea los cambios desde el branch local origin al branch “nombre_rama”.
-git remote prune origin: Actualiza tu repositorio remoto en caso que algún otro desarrollador haya eliminado alguna rama remota.
-git reset --hard HEAD: Elimina los cambios realizados que aún no se hayan hecho commit.
-git revert <hash_commit>: Revierte el commit realizado, identificado por el “hash_commit”.
-Cuando se habla de “quedar parado”, se refiere a donde estás posicionado, dónde o en qué ruta estás realizando los comandos en la terminal.
+### Comandos más utilizados
+------------
+- git init- inicializa el repositorio de git. Empieza en tu carpeta un repositorio para guardar los cambios.
+- git add . – Agrega todos los cambios en todos los archivos al área de staging
+- git status – Para ver el estado de la BD si se han hecho cambios, pero no se han agregado, ahí saldrá. Muestra el estado de tu repositorio
+- git show - Muestra todos los cambios históricos hechos y sus detalles (qué cambió, cuándo y quién los hizo). Muestra el histórico de los cambios hechos.
+- git commit: Envía los últimos cambios del archivo a la base de datos del sistema de control de versiones. Una buena práctica al usar este comando es añadir -m; al hacer esto, podemos escribir un mensaje que nos permita recordar los cambios que hicimos en ese momento.
+- git push -envía los cambios al repositorio remoto
+- git push origin <nombre_rama>: Sube la rama “nombre_rama” al servidor remoto.
+- git pull -Agrega los cambios del commit más nuevo al repositorio local
+- git log “nombre del archivo” : Muestra el historial de ese archivo. git log <nombre_archivo>: Muestra todo el historial del archivo.
+- git fetch: Descarga los cambios realizados en el repositorio remoto.
+- git merge <nombre_rama>: Impacta en la rama en la que te encuentras parado, los cambios realizados en la rama “nombre_rama”.
+- git checkout -b <nombre_rama_nueva>: Crea una rama a partir de la que te encuentres parado con el nombre “nombre_rama_nueva”, y luego salta sobre la rama nueva, por lo que quedas parado en esta última.
+- git checkout -t origin/<nombre_rama>: Si existe una rama remota de nombre “nombre_rama”, al ejecutar este comando se crea una rama local con el nombre “nombre_rama” para hacer un seguimiento de la rama remota con el mismo nombre.
+- git branch: Lista todas las ramas locales.
+- git branch -a:Lista todas las ramas locales y remotas.
+- git branch -d <nombre_rama>: Elimina la rama local con el nombre “nombre_rama”.
+- git push origin <nombre_rama>: Commitea los cambios desde el branch local origin al branch “nombre_rama”.
+- git remote prune origin: Actualiza tu repositorio remoto en caso que algún otro desarrollador haya eliminado alguna rama remota.
+- git reset --hard HEAD: Elimina los cambios realizados que aún no se hayan hecho commit.
+- git revert <hash_commit>: Revierte el commit realizado, identificado por el “hash_commit”.
 
-Un editor de código es una herramienta que nos brinda muchas ayudas para escribir código, algo así como un bloc de notas muy avanzado. Los editores más populares son VSCode, Sublime Text y Atom, pero no necesariamente debes usar alguno de estos para continuar con el curso.
+** Notas: 
+-  Cuando se habla de “quedar parado”, se refiere a donde estás posicionado, dónde o en qué ruta estás realizando los comandos en la terminal.
+-  Un editor de código es una herramienta que nos brinda muchas ayudas para escribir código, algo así como un bloc de notas muy avanzado. Los editores más populares son VSCode, Sublime Text y Atom, pero no necesariamente debes usar alguno de estos para continuar con el curso.
 
-Tipos de archivos y sus diferencias:
+### Tipos de archivos y sus diferencias:
+------------
 
 Archivos de Texto (.txt): Texto plano normal y sin nada especial. Lo vemos igual sin importar dónde lo abramos, ya sea con el bloc de notas o con editores de texto avanzados.
 Archivos RTF (.rtf): Podemos guardar texto con diferentes tamaños, estilos y colores. Pero si lo abrimos desde un editor de código, vamos a ver que es mucho más complejo que solo el texto plano. Esto es porque debe guardar todos los estilos del texto y, para esto, usa un código especial un poco difícil de entender y muy diferente a los textos con estilos especiales al que estamos acostumbrados.
